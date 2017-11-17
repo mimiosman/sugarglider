@@ -24,28 +24,19 @@
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>No Kad Pengenalan</th>
-                  <th>Fungsi</th>
+                  <th>Nombor</th>
+                  <th>Emel</th>
+                  <th>Pertanyaan</th>
                 </tr>
               </thead>
-              <tfoot>
-                <tr>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>No Kad Pengenalan</th>
-                  <th>Fungsi</th>
-                </tr>
-              </tfoot>
               <tbody>
                 <tr>
-                  <td>Donna Snider</td>
-                  <td>Customer Support</td>
-                  <td>New York</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td>
                     <a href="view_pengguna.html" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Kemaskini</a>
+                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Jawab Soalan</a>
                     <a href="" class="btn btn-sm btn-danger">Padam</a>
                   </td>
                 </tr>

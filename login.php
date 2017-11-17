@@ -6,28 +6,28 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login</div>
+      <div class="card-header">Log Masuk</div>
       <div class="card-body">
         <form>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <label for="exampleInputEmail1">Alamat Emel</label>
+            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Masukkan Emel">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <label for="exampleInputPassword1">Katalaluan</label>
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Masukkan Katalaluan">
           </div>
           <div class="form-group">
             <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember Password</label>
+                <input class="form-check-input" type="checkbox"> Ingat Katalaluan</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.php">Login</a>
+          <a class="btn btn-primary btn-block" href="index.php">Log Masuk</a>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.php">Register an Account</a>
-          <a class="d-block small" href="forgot-password.php">Forgot Password?</a>
+          <a class="d-block small mt-3" href="register.php">Daftar Akaun</a>
+          <a class="d-block small" href="forgot-password.php">Terlupa Katalaluan?</a>
         </div>
       </div>
     </div>
