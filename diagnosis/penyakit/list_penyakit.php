@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once('/../../include/header.php'); ?>
+<?php include_once('../../include/header.php'); ?>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <?php include_once('/../../include/navbar.php'); ?>
+  <?php include_once('../../include/navbar.php'); ?>
   <!-- Navigation-->
   <div class="content-wrapper">
     <div class="container-fluid">
@@ -61,10 +61,10 @@
     <!-- /.content-wrapper-->
 
     <!-- footer -->
-    <?php include_once('/../../include/footer.php'); ?>
+    <?php include_once('../../include/footer.php'); ?>
     <!-- /.footer -->
     <!-- script -->
-    <?php include_once('/../../include/script.php'); ?>
+    <?php include_once('../../include/script.php'); ?>
     <!-- /.script -->
   </div>
 </body>

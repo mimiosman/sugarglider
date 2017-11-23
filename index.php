@@ -1,6 +1,12 @@
+<?php session_start(); ?>
+
+<?php
+if(!isset($_SESSION['valid'])) {
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <?php include_once('include/header.php'); ?>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

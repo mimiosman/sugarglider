@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once('/../include/header.php'); ?>
+<?php include_once('../include/header.php'); ?>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <?php include_once('/../include/navbar.php'); ?>
+  <?php include_once('../include/navbar.php'); ?>
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -24,7 +24,7 @@
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  
+
                   <th>Nama</th>
                   <th>Email</th>
                   <th>No Kad Pengenalan</th>
@@ -52,10 +52,10 @@
     <!-- /.content-wrapper-->
 
     <!-- footer -->
-    <?php include_once('/../include/footer.php'); ?>
+    <?php include_once('../include/footer.php'); ?>
     <!-- /.footer -->
     <!-- script -->
-    <?php include_once('/../include/script.php'); ?>
+    <?php include_once('../include/script.php'); ?>
     <!-- /.script -->
   </div>
 </body>
