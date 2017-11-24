@@ -22,7 +22,7 @@
       <div class="modal-body">Adakah anda pasti untuk log keluar?</div>
       <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-        <a class="btn btn-primary" href="logout.php">Log Keluar</a>
+        <a class="btn btn-primary" href="../logout.php">Log Keluar</a>
       </div>
     </div>
   </div>
