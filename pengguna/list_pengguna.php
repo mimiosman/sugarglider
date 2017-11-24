@@ -42,6 +42,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM login");
                 <tr>
                   <th>Nama</th>
                   <th>Email</th>
+                  <th>Fungsi</th>
                 </tr>
               </thead>
               <tbody>

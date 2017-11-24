@@ -18,40 +18,22 @@
       </ol>
 
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Senarai Rawatan</div>
+        <div class="card-header"><i class="fa fa-table"></i> Senarai Rawatan</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Nombor</th>
-                  <th>Penyakit</th>
-                  <th>Cara Rawatan</th>
+                  <th>Bil</th>
+                  <th>Rawatan</th>
+                  <th>Fungsi</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td></td>
+                  <td><center>Tiada Maklumat</center></td>
                   <td></td>
-                  <td></td>
-                  <td>
-                    <a href="view_pengguna.html" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Kemaskini</a>
-                    <a href="" class="btn btn-sm btn-danger">Padam</a>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <a href="view_pengguna.html" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Kemaskini</a>
-                    <a href="" class="btn btn-sm btn-danger">Padam</a>
-                  </td>
                 </tr>
               </tbody>
             </table>

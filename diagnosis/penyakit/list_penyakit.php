@@ -18,37 +18,22 @@
       </ol>
 
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Senarai Penyakit</div>
+        <div class="card-header"><i class="fa fa-table"></i> Senarai Penyakit</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>No Kad Pengenalan</th>
+                  <th>Bil</th>
+                  <th>Penyakit</th>
                   <th>Fungsi</th>
                 </tr>
               </thead>
-              <tfoot>
-                <tr>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>No Kad Pengenalan</th>
-                  <th>Fungsi</th>
-                </tr>
-              </tfoot>
               <tbody>
                 <tr>
-                  <td>Donna Snider</td>
-                  <td>Customer Support</td>
-                  <td>New York</td>
-                  <td>
-                    <a href="view_pengguna.html" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Kemaskini</a>
-                    <a href="" class="btn btn-sm btn-danger">Padam</a>
-                  </td>
+                  <td></td>
+                  <td><center>Tiada Maklumat</center></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>

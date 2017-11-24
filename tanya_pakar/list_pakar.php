@@ -24,20 +24,32 @@
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Nombor</th>
-                  <th>Emel</th>
-                  <th>Pertanyaan</th>
+                  <th>Bil</th>
+                  <th>Nama</th>
+                  <th>Soalan</th>
+                  <th>Status</th>
+                  <th>Fungsi</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>1.</td>
+                  <td>Hasyimah</td>
+                  <td>Kenapa Sugar glider saya Kurang makan?</td>
+                  <td><button type="button" class="btn btn-sm btn-success">Sudah dijawab</button></td>
                   <td>
-                    <a href="view_pengguna.html" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pengguna.html" class="btn btn-sm btn-info">Jawab Soalan</a>
-                    <a href="" class="btn btn-sm btn-danger">Padam</a>
+                    <a href="view_pakar.php" class="btn btn-sm btn-primary">Papar</a>
+                    <a href="edit_pakar.php" class="btn btn-sm btn-info">Jawab</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Hazwan</td>
+                  <td>Segar glider saya malas bergerak tapi kuat makan. kenapa ye?</td>
+                  <td><button type="button" class="btn btn-sm btn-warning">Belum dijawab</button></td>
+                  <td>
+                    <a href="view_pakar.php" class="btn btn-sm btn-primary">Papar</a>
+                    <a href="edit_pakar.php" class="btn btn-sm btn-info">Jawab</a>
                   </td>
                 </tr>
               </tbody>

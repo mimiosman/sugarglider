@@ -17,15 +17,13 @@
       </ol>
 
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Laporan</div>
+        <div class="card-header"><i class="fa fa-table"></i> Laporan</div>
         <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
-
-
-            </table>
-          </div>
+          <ol class="list-group">
+            <li class="list-group-item"><a href="#">Laporan Penggunaan Sistem</a></li>
+            <li class="list-group-item"><a href="#">Senarai Soalan Kepada Pakar</a></li>
+            <li class="list-group-item"><a href="#">Senarai Penyakit</a></li>
+          </ol>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
