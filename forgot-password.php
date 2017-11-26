@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,17 +28,14 @@
 
             $row = mysqli_fetch_assoc($result);
 
-            if(is_array($row) && !empty($row)) {
-              $validuser = $row['username'];
-              $_SESSION['valid'] = $validuser;
+            $row_cnt = mysqli_num_rows($result);
+
+            if($row_cnt!=0) {
+              header('Location: reset-password.php');
             } else {
               echo "Email tersebut belum berdaftar dengan kami.";
               echo "<br/>";
               echo "<a href='forgot-password.php'>Kembali</a>";
-            }
-
-            if(isset($_SESSION['valid'])) {
-              header('Location: reset-password.php');
             }
           }
         } else {
