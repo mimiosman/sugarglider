@@ -7,7 +7,7 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Reset Password</div>
+      <div class="card-header">Reset KataLaluan</div>
       <div class="card-body">
         <?php
         include_once("include/connection.php");
@@ -44,8 +44,8 @@
         }
         ?>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.php">Register an Account</a>
-          <a class="d-block small" href="login.php">Login Page</a>
+          <a class="d-block small mt-3" href="register.php">Daftar Akaun</a>
+          <a class="d-block small" href="login.php">Halaman Log Masuk</a>
         </div>
       </div>
     </div>

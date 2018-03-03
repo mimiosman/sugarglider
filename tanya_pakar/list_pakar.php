@@ -28,7 +28,7 @@
                   <th>Nama</th>
                   <th>Soalan</th>
                   <th>Status</th>
-                  <th>Fungsi</th>
+
                 </tr>
               </thead>
               <tbody>
@@ -56,7 +56,7 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        <!--<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>-->
       </div>
     </div>
     <!-- /.container-fluid-->

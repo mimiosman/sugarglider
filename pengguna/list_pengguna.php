@@ -28,12 +28,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM login");
         <li class="breadcrumb-item">
           <a href="#">Halaman Utama</a>
         </li>
-        <li class="breadcrumb-item active">Pengguna</li>
+        <li class="breadcrumb-item active">Pentadbir</li>
       </ol>
 
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Senarai Pengguna
+          <i class="fa fa-table"></i> Senarai Pentadbir
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -42,7 +42,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM login");
                 <tr>
                   <th>Nama</th>
                   <th>Email</th>
-                  <th>Fungsi</th>
                 </tr>
               </thead>
               <tbody>

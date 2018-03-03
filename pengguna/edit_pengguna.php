@@ -65,7 +65,7 @@ while($res = mysqli_fetch_array($result))
         <li class="breadcrumb-item">
           <a href="#">Halaman Utama</a>
         </li>
-        <li class="breadcrumb-item active">Pengguna</li>
+        <li class="breadcrumb-item active">Pentadbir</li>
       </ol>
 
       <div class="card mb-3">

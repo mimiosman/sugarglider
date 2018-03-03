@@ -14,7 +14,7 @@
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
         <a class="nav-link" href="/pengguna/list_pengguna.php">
           <i class="fa fa-fw fa-user-circle"></i>
-          <span class="nav-link-text">Maklumat Pengguna</span>
+          <span class="nav-link-text">Maklumat Pentadbir</span>
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="diagnosis">
