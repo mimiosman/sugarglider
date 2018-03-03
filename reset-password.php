@@ -39,10 +39,10 @@
             </div>
             <div class="form-group">
               <div class="form-row">
-                <div class="row">
+                <div class="">
                   <a href="forgot-password.php" class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                 </div>
-                <div class="row">
+                <div class="">
                   <input class="btn btn-primary btn-block" type="submit" name="submit" value="Reset">
                 </div>
               </div>

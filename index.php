@@ -23,6 +23,7 @@ if(!isset($_SESSION['valid'])) {
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
     </div>
+		<?php echo $_SESSION['valid']; ?>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <!-- footer -->

@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
   <a class="navbar-brand" href="/index.php">Sistem Pakar Diagnosis Penyakit Sugar Glider</a>
+  <?php
+
+  ?>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,9 +15,9 @@
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-        <a class="nav-link" href="/pengguna/list_pengguna.php">
+        <a class="nav-link" href="/profile/view_profile.php?id=<?php echo $_SESSION['id']; ?>">
           <i class="fa fa-fw fa-user-circle"></i>
-          <span class="nav-link-text">Maklumat Pentadbir</span>
+          <span class="nav-link-text">Profil</span>
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="diagnosis">
@@ -45,6 +48,12 @@
         <a class="nav-link" href="/laporan/list_laporan.php">
           <i class="fa fa-fw fa-bar-chart"></i>
           <span class="nav-link-text">Laporan</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+        <a class="nav-link" href="/pengguna/list_pengguna.php">
+          <i class="fa fa-fw fa-user-circle"></i>
+          <span class="nav-link-text">Senarai Pentadbir</span>
         </a>
       </li>
     </ul>
