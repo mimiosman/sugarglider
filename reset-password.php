@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +37,16 @@
             <div class="form-group">
               <input class="form-control" id="InputPassword1" name="password" type="password" placeholder="KataLaluan" required>
             </div>
-            <input class="btn btn-primary btn-block" type="submit" name="submit" value="Reset">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="row">
+                  <a href="forgot-password.php" class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                </div>
+                <div class="row">
+                  <input class="btn btn-primary btn-block" type="submit" name="submit" value="Reset">
+                </div>
+              </div>
+            </div>
           </form>
           <?php
         }
