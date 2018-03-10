@@ -50,7 +50,7 @@
         }
         ?>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.php">Daftar Akaun</a>
+          <!-- <a class="d-block small mt-3" href="register.php">Daftar Akaun</a> -->
           <a class="d-block small" href="login.php">Halaman Log Masuk</a>
         </div>
       </div>
