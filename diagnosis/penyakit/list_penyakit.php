@@ -39,9 +39,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM penyakit");
               <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Bil</th>
                     <th>Nama Penyakit</th>
-                    <th><a href="add_penyakit.php" class="btn btn-sm btn-secondary">Tambah</a></th>
+                    <th class="text-right"><a href="add_penyakit.php" class="btn btn-sm btn-secondary">Tambah</a></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -49,9 +48,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM penyakit");
                   while($res = mysqli_fetch_array($result)) {
                     ?>
                     <tr>
-                      <td><?php echo $res['id']; ?></td>
                       <td><?php echo $res['name']; ?></td>
-                      <td>
+                      <td class="text-right">
                         <a href="view_penyakit.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
                         <a href="edit_penyakit.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Kemaskini</a>
                         <a href="delete_penyakit.php?id=<?php echo $res['id']; ?>" onClick="return confirm('Anda pasti untuk padam pengguna ini?')" class="btn btn-sm btn-danger">Padam</a>

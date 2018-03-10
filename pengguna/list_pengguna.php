@@ -42,6 +42,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM login");
                 <tr>
                   <th>Nama</th>
                   <th>Email</th>
+                  <th class="text-right"><a href="add_pengguna.php" class="btn btn-sm btn-secondary">Tambah</a></th>
                 </tr>
               </thead>
               <tbody>
@@ -51,7 +52,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM login");
                   <tr>
                     <td><?php echo $res['name']; ?></td>
                     <td><?php echo $res['username']; ?></td>
-                    <td>
+                    <td class="text-right">
                       <a href="view_pengguna.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
                       <a href="edit_pengguna.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Kemaskini</a>
                       <a href="delete_pengguna.php?id=<?php echo $res['id']; ?>" onClick="return confirm('Anda pasti untuk padam pengguna ini?')" class="btn btn-sm btn-danger">Padam</a>

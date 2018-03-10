@@ -11378,7 +11378,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Seterusnya",
 
 
 				/**
@@ -11401,7 +11401,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Sebelumnya"
 			},
 
 			/**
@@ -11424,7 +11424,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Tiada data tersedia dalam jadual",
 
 
 			/**
@@ -11456,7 +11456,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Menunjukkan _START_ kepada _END_ daripada _TOTAL_ penyertaan",
 
 
 			/**
@@ -11617,7 +11617,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "Tunjukkan _MENU_ penyertaan",
 
 
 			/**
@@ -11697,7 +11697,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Cari:",
 
 
 			/**

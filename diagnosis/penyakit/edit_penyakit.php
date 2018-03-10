@@ -33,7 +33,7 @@ if(isset($_POST['update']))
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: list_pengguna.php");
+    header("Location: list_penyakit.php");
   }
 }
 ?>
@@ -67,11 +67,11 @@ while($res = mysqli_fetch_array($result))
           <li class="breadcrumb-item">
             <a href="#">Halaman Utama</a>
           </li>
-          <li class="breadcrumb-item active">Tambah Penyakit</li>
+          <li class="breadcrumb-item active">Kemaskini Penyakit</li>
         </ol>
 
         <div class="card mb-3">
-          <div class="card-header"><i class="fa fa-table"></i>  Tambah Penyakit</div>
+          <div class="card-header"><i class="fa fa-table"></i>  Kemaskini Penyakit</div>
           <div class="card-body">
             <form  name="add_penyakit" method="post" action="edit_penyakit.php">
               <div class="form-group row">
@@ -86,7 +86,8 @@ while($res = mysqli_fetch_array($result))
                   <textarea class="form-control" rows="5" id="detail" name="detail"><?php echo $detail;?></textarea>
                 </div>
               </div>
-              <input type="submit" class="btn btn-primary" name="update" value="tambah">
+              <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+              <input type="submit" class="btn btn-primary" name="update" value="Kemaskini">
               <a href="list_penyakit.php" class="btn btn-danger">Kembali</a>
             </form>
           </div>
