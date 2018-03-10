@@ -11,7 +11,7 @@ if(!isset($_SESSION['valid'])) {
 include_once("../include/connection.php");
 
 //fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM pakar JOIN login ON pakar.Asker = login.id");
+$result = mysqli_query($mysqli, "SELECT *, pakar.id AS id_pakar, login.id AS id_login FROM pakar JOIN login ON pakar.Asker = login.id");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,31 +63,13 @@ $result = mysqli_query($mysqli, "SELECT * FROM pakar JOIN login ON pakar.Asker =
                        ?>
                     </td>
                     <td>
-                      <a href="view_pakar.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
-                      <a href="edit_pakar.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Jawab</a>
+                      <a href="view_pakar.php?id=<?php echo $res['id_pakar']; ?>" class="btn btn-sm btn-primary">Papar</a>
+                      <a href="edit_pakar.php?id=<?php echo $res['id_pakar']; ?>" class="btn btn-sm btn-info">Jawab</a>
                     </td>
                   </tr>
                   <?php
                 }
                 ?>
-                <!-- <tr>
-                  <td>Hasyimah</td>
-                  <td>Kenapa Sugar glider saya Kurang makan?</td>
-                  <td><button type="button" class="btn btn-sm btn-success">Sudah dijawab</button></td>
-                  <td>
-                    <a href="view_pakar.php" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pakar.php" class="btn btn-sm btn-info">Jawab</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Hazwan</td>
-                  <td>Segar glider saya malas bergerak tapi kuat makan. kenapa ye?</td>
-                  <td><button type="button" class="btn btn-sm btn-warning">Belum dijawab</button></td>
-                  <td>
-                    <a href="view_pakar.php" class="btn btn-sm btn-primary">Papar</a>
-                    <a href="edit_pakar.php" class="btn btn-sm btn-info">Jawab</a>
-                  </td>
-                </tr> -->
               </tbody>
             </table>
           </div>
