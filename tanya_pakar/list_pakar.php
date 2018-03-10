@@ -1,3 +1,18 @@
+<?php session_start(); ?>
+
+<?php
+if(!isset($_SESSION['valid'])) {
+  header('Location: login.php');
+}
+?>
+
+<?php
+//including the database connection file
+include_once("../include/connection.php");
+
+//fetching data in descending order (lastest entry first)
+$result = mysqli_query($mysqli, "SELECT * FROM pakar JOIN login ON pakar.Asker = login.id");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,16 +39,38 @@
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Bil</th>
                   <th>Nama</th>
-                  <th>Soalan</th>
+                  <th>Tajuk</th>
                   <th>Status</th>
+                  <th>Tindakan</th>
 
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1.</td>
+                <?php
+                while($res = mysqli_fetch_array($result)) {
+                  ?>
+                  <tr>
+                    <td><?php echo $res['name']; ?></td>
+                    <td><?php echo $res['Title']; ?></td>
+                    <td>
+                      <?php
+                        if ($res['Status'] == 0) {
+                          echo "<button type='button' class='btn btn-sm btn-warning'>Belum dijawab</button>";
+                        } elseif ($res['Status'] == 1) {
+                          echo "<button type='button' class='btn btn-sm btn-success'>Sudah dijawab</button>";
+                        }
+                       ?>
+                    </td>
+                    <td>
+                      <a href="view_pakar.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
+                      <a href="edit_pakar.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Jawab</a>
+                    </td>
+                  </tr>
+                  <?php
+                }
+                ?>
+                <!-- <tr>
                   <td>Hasyimah</td>
                   <td>Kenapa Sugar glider saya Kurang makan?</td>
                   <td><button type="button" class="btn btn-sm btn-success">Sudah dijawab</button></td>
@@ -43,7 +80,6 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>2.</td>
                   <td>Hazwan</td>
                   <td>Segar glider saya malas bergerak tapi kuat makan. kenapa ye?</td>
                   <td><button type="button" class="btn btn-sm btn-warning">Belum dijawab</button></td>
@@ -51,7 +87,7 @@
                     <a href="view_pakar.php" class="btn btn-sm btn-primary">Papar</a>
                     <a href="edit_pakar.php" class="btn btn-sm btn-info">Jawab</a>
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
