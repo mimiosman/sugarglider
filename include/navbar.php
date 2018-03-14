@@ -50,12 +50,12 @@
           <span class="nav-link-text">Laporan</span>
         </a>
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+      <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
         <a class="nav-link" href="/pengguna/list_pengguna.php">
           <i class="fa fa-fw fa-user-circle"></i>
           <span class="nav-link-text">Senarai Pentadbir</span>
         </a>
-      </li>
+      </li> -->
     </ul>
     <ul class="navbar-nav sidenav-toggler">
       <li class="nav-item">
