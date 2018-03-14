@@ -92,6 +92,7 @@ WHERE link.id_penyakit = $id");
                       <a href="add_penyakit_simptom.php?id=<?php echo $id ?>" class="btn btn-primary btn-sm">Tambah</a>
                       <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
                     </div>
+                    <input type="hidden" name="idSick" value=<?php echo $id;?>>
                   </form>
                 </div>
               </div>
@@ -116,6 +117,7 @@ WHERE link.id_penyakit = $id");
                       <a href="add_penyakit_rawatan.php?id=<?php echo $id ?>" class="btn btn-primary btn-sm">Tambah</a>
                       <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
                     </div>
+                    <input type="hidden" name="idSick" value=<?php echo $id;?>>
                   </form>
                 </div>
               </div>

@@ -26,7 +26,7 @@ if(isset($_POST['add']))
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: list_penyakit.php");
+    header("Location: view_penyakit.php?id=".$penyakit);
   }
 }
 ?>
@@ -78,7 +78,6 @@ $result2 = mysqli_query($mysqli, "SELECT * FROM simptom");
                   <label for="simptom" class="col-sm-2 col-form-label"> Simptom</label>
                   <div class="col-sm-4">
                     <select class="form-control" name="simptom">
-                      <option value="">pilih</option>
                       <?php
                       while($res2 = mysqli_fetch_array($result2))
                       { ?>
