@@ -82,7 +82,7 @@ WHERE link.id_penyakit = $id");
                     while($res2 = mysqli_fetch_array($result2))
                     { ?>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<?php echo $res2['linkID']; ?>" name="checked_id[]" id="a">
+                        <input class="" type="checkbox" value="<?php echo $res2['linkID']; ?>" name="checked_id[]" id="a">
                         <label class="form-check-label" for="a">
                           <?php echo $res2['name']; ?>
                         </label>
@@ -107,7 +107,7 @@ WHERE link.id_penyakit = $id");
                     while($res3 = mysqli_fetch_array($result3))
                     { ?>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<?php echo $res3['linkID']; ?>" name="checked_id[]" id="a">
+                        <input class="" type="checkbox" value="<?php echo $res3['linkID']; ?>" name="checked_id[]" id="a">
                         <label class="form-check-label" for="a">
                           <?php echo $res3['name']; ?>
                         </label>
