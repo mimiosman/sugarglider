@@ -27,10 +27,13 @@
         </a>
         <ul class="sidenav-second-level collapse" id="collapsediagnosis">
           <li>
-            <a href="/diagnosis/simptom/list_simptom.php">Simptom</a>
+            <a href="/diagnosis/link/list_link.php">Hubungan</a>
           </li>
           <li>
             <a href="/diagnosis/penyakit/list_penyakit.php">Penyakit</a>
+          </li>
+          <li>
+            <a href="/diagnosis/simptom/list_simptom.php">Simptom</a>
           </li>
           <li>
             <a href="/diagnosis/rawatan/list_rawatan.php">Cara Rawatan</a>

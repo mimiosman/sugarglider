@@ -72,7 +72,7 @@ WHERE link.id_penyakit = $id");
             <!--<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>-->
           </div>
 
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-sm-6">
               <div class="card mb-3">
                 <div class="card-header"><i class="fa fa-table"></i>  Simptom</div>
@@ -122,7 +122,7 @@ WHERE link.id_penyakit = $id");
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
         <!-- /.container-fluid-->
