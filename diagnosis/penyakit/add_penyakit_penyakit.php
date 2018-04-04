@@ -47,11 +47,11 @@ WHERE link.id_penyakit = $id");
           <li class="breadcrumb-item">
             <a href="#">Halaman Utama</a>
           </li>
-          <li class="breadcrumb-item active">Papar Penyakit</li>
+          <li class="breadcrumb-item active">Tambah Penyakit</li>
         </ol>
 
         <div class="card mb-3">
-          <div class="card-header"><i class="fa fa-table"></i>  Papar Penyakit</div>
+          <div class="card-header"><i class="fa fa-table"></i>  Tambah Penyakit</div>
             <div class="card-body">
               <form  name="add_penyakit" method="post" action="add_penyakit.php">
                 <div class="form-group row">
@@ -66,6 +66,7 @@ WHERE link.id_penyakit = $id");
                     <textarea class="form-control" rows="5" id="detail" name="detail" disabled><?php echo $detail;?></textarea>
                   </div>
                 </div>
+                <input type="submit" class="btn btn-primary btn-sm" name="add" value="tambah" disabled>
                 <a href="list_penyakit.php" class="btn btn-danger btn-sm">Kembali</a>
               </form>
             </div>
@@ -88,9 +89,8 @@ WHERE link.id_penyakit = $id");
                         </label>
                       </div>
                     <?php } ?>
-                    <div class="pull-right d-none">
+                    <div class="pull-right">
                       <a href="add_penyakit_simptom.php?id=<?php echo $id ?>" class="btn btn-primary btn-sm">Tambah</a>
-                      <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
                     </div>
                     <input type="hidden" name="idSick" value=<?php echo $id;?>>
                   </form>
@@ -113,9 +113,8 @@ WHERE link.id_penyakit = $id");
                         </label>
                       </div>
                     <?php } ?>
-                    <div class="pull-right d-none">
+                    <div class="pull-right">
                       <a href="add_penyakit_rawatan.php?id=<?php echo $id ?>" class="btn btn-primary btn-sm">Tambah</a>
-                      <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
                     </div>
                     <input type="hidden" name="idSick" value=<?php echo $id;?>>
                   </form>

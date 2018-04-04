@@ -26,7 +26,7 @@
           <span class="nav-link-text">Diagnosis</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapsediagnosis">
-          <li>
+          <li class="d-none">
             <a href="/diagnosis/link/list_link.php">Hubungan</a>
           </li>
           <li>

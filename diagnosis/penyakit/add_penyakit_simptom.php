@@ -26,7 +26,7 @@ if(isset($_POST['add']))
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: view_penyakit.php?id=".$penyakit);
+    header("Location: add_penyakit_penyakit.php?id=".$penyakit);
   }
 }
 ?>

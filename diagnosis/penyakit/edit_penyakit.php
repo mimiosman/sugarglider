@@ -50,6 +50,16 @@ while($res = mysqli_fetch_array($result))
   $name = $res['name'];
   $detail = $res['detail'];
 }
+
+$result2 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+FROM link
+JOIN simptom ON link.id_simptom = simptom.id
+WHERE link.id_penyakit = $id");
+
+$result3 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+FROM link
+JOIN rawatan ON link.id_rawatan = rawatan.id
+WHERE link.id_penyakit = $id");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,6 +102,56 @@ while($res = mysqli_fetch_array($result))
             </form>
           </div>
           <!--<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>-->
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card mb-3">
+              <div class="card-header"><i class="fa fa-table"></i>  Simptom</div>
+              <div class="card-body">
+                <form id="delete" action="delete_penyakit_simptom.php" method="post" >
+                  <?php
+                  while($res2 = mysqli_fetch_array($result2))
+                  { ?>
+                    <div class="form-check">
+                      <input class="" type="checkbox" value="<?php echo $res2['linkID']; ?>" name="checked_id[]" id="a">
+                      <label class="form-check-label" for="a">
+                        <?php echo $res2['name']; ?>
+                      </label>
+                    </div>
+                  <?php } ?>
+                  <div class="pull-right">
+                    <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
+                  </div>
+                  <input type="hidden" name="idSick" value=<?php echo $id;?>>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="card mb-3">
+              <div class="card-header"><i class="fa fa-table"></i>  Rawatan</div>
+              <div class="card-body">
+                <form id="delete" action="delete_penyakit_simptom.php" method="post" >
+                  <?php
+                  while($res3 = mysqli_fetch_array($result3))
+                  { ?>
+                    <div class="form-check">
+                      <input class="" type="checkbox" value="<?php echo $res3['linkID']; ?>" name="checked_id[]" id="a">
+                      <label class="form-check-label" for="a">
+                        <?php echo $res3['name']; ?>
+                      </label>
+                    </div>
+                  <?php } ?>
+                  <div class="pull-right">
+                    <input type="submit" class="btn btn-danger btn-sm" name="bulk_delete_submit" value="Padam">
+                  </div>
+                  <input type="hidden" name="idSick" value=<?php echo $id;?>>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- /.container-fluid-->

@@ -29,8 +29,10 @@ if(isset($_POST['add']))
     $result = mysqli_query($mysqli, "INSERT INTO `penyakit`(`name`, `detail`) VALUES ('$name','$detail')")
     or die("Could not execute the select query.");
 
+    $id = mysqli_insert_id($mysqli);
+
     //redirectig to the display page. In our case, it is view.php
-    header("Location: list_penyakit.php");
+    header("Location: add_penyakit_penyakit.php?id=".$id);
   }
 }
 ?>
