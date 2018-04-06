@@ -20,9 +20,9 @@
         <div class="card-header"><i class="fa fa-table"></i> Laporan</div>
         <div class="card-body">
           <ol class="list-group">
-            <li class="list-group-item"><a href="#">Laporan 1</a></li>
-            <li class="list-group-item"><a href="#">Laporan 2</a></li>
-            <li class="list-group-item"><a href="#">Laporan 3</a></li>
+            <li class="list-group-item"><a href="senarai_soalan.php">Senarai Soalan & Jawapan Tanya Pakar</a></li>
+            <li class="list-group-item"><a href="senarai_pengguna.php">Senarai Maklumat Pengguna</a></li>
+            <li class="list-group-item"><a href="senarai_link.php">Senarai Hubungan Penyakit, Simptom dan Cara Rawatan</a></li>
           </ol>
         </div>
         <!--<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>-->
