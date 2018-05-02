@@ -46,6 +46,12 @@
           <span class="nav-link-text">Tanya Pakar</span>
         </a>
       </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+        <a class="nav-link" href="/tips_penjagaan/list_jaga.php">
+          <i class="fa fa-fw fa-stethoscope"></i>
+          <span class="nav-link-text">Tips Penjagaan</span>
+        </a>
+      </li>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
         <a class="nav-link" href="/laporan/list_laporan.php">
