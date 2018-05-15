@@ -12,8 +12,14 @@ include_once("../include/connection.php");
 
 if(isset($_POST['insert']))
 {
+  // Get image name
+  $image = $_FILES['image']['name'];
+
   $title = $_POST['tajuk'];
   $description = $_POST['penerangan'];
+
+  // image file directory
+  $target = "../static/img/jaga/".basename($image);
 
   // checking empty fields
   if(empty($title)) {
@@ -23,9 +29,15 @@ if(isset($_POST['insert']))
     }
   } else {
     //updating the table
-    $query = "INSERT INTO `penjagaan`(`title`, `description`) VALUES ('$title', '$description')";
+    $query = "INSERT INTO `penjagaan`(`title`, `description`, `Image`) VALUES ('$title', '$description', '$image')";
     $result = mysqli_query($mysqli, $query)
     or die("Could not execute the select query.");
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+  		$msg = "Image uploaded successfully";
+  	}else{
+  		$msg = "Failed to upload image";
+  	}
 
     //redirectig to the display page. In our case, it is view.php
     header("Location: list_jaga.php");
@@ -55,7 +67,7 @@ if(isset($_POST['insert']))
         <div class="card-header">
           <i class="fa fa-table"></i> Tips Penjagaan</div>
           <div class="card-body">
-            <form  name="form1" method="post" action="add_jaga.php">
+            <form  name="form1" method="post" action="add_jaga.php" enctype="multipart/form-data">
               <div class="form-group row">
                 <label for="tajuk" class="col-sm-2 col-form-label">Tajuk</label>
                 <div class="col-sm-6">
@@ -66,6 +78,13 @@ if(isset($_POST['insert']))
                 <label for="soalan" class="col-sm-2 col-form-label">Penerangan</label>
                 <div class="col-sm-6">
                   <textarea class="form-control" rows="4" id="penerangan" name="penerangan" placeholder="penerangan"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="soalan" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-6">
+                  <input type="hidden" name="size" value="1000000">
+                  <input type="file" class="form-control-file" id="Gambar" name="image">
                 </div>
               </div>
               <a href="list_jaga.php" class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>

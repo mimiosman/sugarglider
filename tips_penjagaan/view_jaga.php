@@ -47,6 +47,7 @@ while($res = mysqli_fetch_array($result))
 {
   $title = $res['title'];
   $description = $res['description'];
+  $image = $res['Image'];
 }
 ?>
 <!DOCTYPE html>
@@ -72,6 +73,12 @@ while($res = mysqli_fetch_array($result))
           <i class="fa fa-table"></i> Tips Penjagaan</div>
           <div class="card-body">
             <form  name="form1" method="post" action="edit_jaga.php">
+              <div class="form-group row">
+                <label for="tajuk" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-6">
+                  <img src="<?php echo "../static/img/jaga/".$image ?>" class="img-thumbnail" alt="<?php $image ?>" width="304" height="236">
+                </div>
+              </div>
               <div class="form-group row">
                 <label for="tajuk" class="col-sm-2 col-form-label">Tajuk</label>
                 <div class="col-sm-6">
