@@ -22,26 +22,12 @@ if(!isset($_SESSION['valid'])) {
         </li>
         <li class="breadcrumb-item active">Utama</li>
       </ol>
-
-
-        <!--<div class="card-header">-->
-          <!--<i class="fa fa-table"></i> Maklumat System</div>-->
-					<div class='a'>
-					<h1 align="center"> SELAMAT DATANG KE APLIKASI SISTEM PAKAR DIAGNOSIS PENYAKIT SUGAR GLIDER</h1>
-					<p text-align=center><img src="/static/img/sugar_glider3.png" width="550" height="350" class="center"></p>
-
-
-				      <!-- <div class="rows"> -->
-
-				        <!-- <div class="thumbnail">
-				          <img src="/static/img/sugar_glider3.png">
-				        </div> -->
-
-				      <!-- </div> -->
-						</div>
-
-        <!--</div>-->
-
+			<div class="row">
+        <div class="col-12 text-center">
+          <h1>SELAMAT DATANG KE APLIKASI SISTEM PAKAR DIAGNOSIS PENYAKIT SUGAR GLIDER</h1>
+          <p><img src="/static/img/sugar_glider3.png" width="550" height="350" class="center"></p>
+        </div>
+      </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <!-- footer -->
