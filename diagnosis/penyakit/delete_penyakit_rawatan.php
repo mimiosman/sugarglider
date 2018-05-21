@@ -10,7 +10,7 @@ if(!isset($_SESSION['valid'])) {
 //including the database connection file
 include("../../include/connection.php");
 
-if(isset($_POST['bulk_delete_submit'])){
+if(isset($_POST['bulk_delete_submit'])){ //segala checkbox yang dipilih akan delete
     $idSick = $_POST['idSick'];
     $idArr = $_POST['checked_id'];
     foreach($idArr as $id){

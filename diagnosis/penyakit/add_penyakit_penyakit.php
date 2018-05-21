@@ -13,7 +13,7 @@ include_once("../../include/connection.php");
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM penyakit WHERE id=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM penyakit WHERE id=$id"); //panggil tajuk penyakit dengan detail penyakit
 
 while($res = mysqli_fetch_array($result))
 {
@@ -21,12 +21,12 @@ while($res = mysqli_fetch_array($result))
   $detail = $res['detail'];
 }
 
-$result2 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+$result2 = mysqli_query($mysqli, "SELECT *, link.id AS linkID  --paparkan simptom yang sudah link dengan penyakit-->
 FROM link
 JOIN simptom ON link.id_simptom = simptom.id
 WHERE link.id_penyakit = $id");
 
-$result3 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+$result3 = mysqli_query($mysqli, "SELECT *, link.id AS linkID --paparkan cara rawtaab yang sudah link dengan penyakit-->
 FROM link
 JOIN rawatan ON link.id_rawatan = rawatan.id
 WHERE link.id_penyakit = $id");

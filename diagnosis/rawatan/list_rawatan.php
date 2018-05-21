@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM rawatan");
               <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Cara Rawatan</th>
+                    <th width="75%">Cara Rawatan</th>
                     <th class="text-right"><a href="add_rawatan.php" class="btn btn-sm btn-secondary">Tambah</a></th>
                   </tr>
                 </thead>

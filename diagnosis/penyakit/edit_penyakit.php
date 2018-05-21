@@ -51,12 +51,12 @@ while($res = mysqli_fetch_array($result))
   $detail = $res['detail'];
 }
 
-$result2 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+$result2 = mysqli_query($mysqli, "SELECT *, link.id AS linkID -- kemaskini simptom -->
 FROM link
 JOIN simptom ON link.id_simptom = simptom.id
 WHERE link.id_penyakit = $id");
 
-$result3 = mysqli_query($mysqli, "SELECT *, link.id AS linkID
+$result3 = mysqli_query($mysqli, "SELECT *, link.id AS linkID -- kemaskini cara rawatan-->
 FROM link
 JOIN rawatan ON link.id_rawatan = rawatan.id
 WHERE link.id_penyakit = $id");

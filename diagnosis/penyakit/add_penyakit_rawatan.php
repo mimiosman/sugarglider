@@ -22,7 +22,7 @@ if(isset($_POST['add']))
     }
   } else {
     //updating the table
-    $result = mysqli_query($mysqli, "INSERT INTO `link`(`id_penyakit`, `id_rawatan`) VALUES ('$penyakit','$rawatan')")
+    $result = mysqli_query($mysqli, "INSERT INTO `link`(`id_penyakit`, `id_rawatan`) VALUES ('$penyakit','$rawatan')") //panggil tajuk dan detail rawatan
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
@@ -36,14 +36,14 @@ if(isset($_POST['add']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM penyakit WHERE id=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM penyakit WHERE id=$id"); //paparkan tajuk penyakit
 
 while($res = mysqli_fetch_array($result))
 {
   $name = $res['name'];
 }
 
-$result2 = mysqli_query($mysqli, "SELECT * FROM rawatan");
+$result2 = mysqli_query($mysqli, "SELECT * FROM rawatan"); // drop down rawatan
 ?>
 <!DOCTYPE html>
 <html lang="en">
