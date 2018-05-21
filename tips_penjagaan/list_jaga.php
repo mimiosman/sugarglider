@@ -52,7 +52,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM penjagaan ");
                     <td><?php echo $res['title']; ?></td>
                     <td class="text-right">
                       <a href="view_jaga.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
-                      <a href="edit_jaga.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                      <a href="edit_jaga.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Kemaskini</a>
                       <a href="delete_jaga.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-danger">Padam</a>
                     </td>
                   </tr>
