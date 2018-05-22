@@ -32,7 +32,7 @@ if(isset($_POST['add']))
     $id = mysqli_insert_id($mysqli);
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: add_penyakit_penyakit.php?id=".$id);
+    header("Location: list_penyakit.php");
   }
 }
 ?>

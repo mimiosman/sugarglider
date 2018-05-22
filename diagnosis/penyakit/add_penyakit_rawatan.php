@@ -26,7 +26,7 @@ if(isset($_POST['add']))
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: add_penyakit_penyakit.php?id=".$penyakit);
+    header("Location: edit_penyakit.php?id=".$penyakit);
   }
 }
 ?>
@@ -61,11 +61,11 @@ $result2 = mysqli_query($mysqli, "SELECT * FROM rawatan");
           <li class="breadcrumb-item">
             <a href="#">Halaman Utama</a>
           </li>
-          <li class="breadcrumb-item active">Tambah Penyakit</li>
+          <li class="breadcrumb-item active">Tambah Rawatan</li>
         </ol>
 
         <div class="card mb-3">
-          <div class="card-header"><i class="fa fa-table"></i>  Tambah Penyakit</div>
+          <div class="card-header"><i class="fa fa-table"></i>  Tambah Rawatan</div>
             <div class="card-body">
               <form  name="add_penyakit" method="post" action="add_penyakit_rawatan.php">
                 <div class="form-group row">

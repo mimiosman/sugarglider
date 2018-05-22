@@ -52,7 +52,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM penyakit");
                       <td class="text-right">
                         <a href="view_penyakit.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-primary">Papar</a>
                         <a href="edit_penyakit.php?id=<?php echo $res['id']; ?>" class="btn btn-sm btn-info">Kemaskini</a>
-                        <a href="delete_penyakit.php?id=<?php echo $res['id']; ?>" onClick="return confirm('Anda pasti untuk padam pengguna ini?')" class="btn btn-sm btn-danger">Padam</a>
+                        <a href="delete_penyakit.php?id=<?php echo $res['id']; ?>" onClick="return confirm('Anda pasti untuk padam penyakit ini?')" class="btn btn-sm btn-danger">Padam</a>
                       </td>
                     </tr>
                     <?php
