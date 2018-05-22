@@ -11,39 +11,30 @@ include_once("../../include/connection.php");
 
 if(isset($_POST['add']))
 {
-  echo $penyakit = $_POST['id'];
-  echo $rawatan = $_POST['rawatan'];
+  echo $name = $_POST['name'];
+  echo $detail = $_POST['detail'];
 
   // checking empty fields
-  if(empty($rawatan)) {
+  if(empty($name) || empty($detail)) {
 
-    if(empty($rawatan)) {
-      echo "<font color='red'>Ruang rawatan kosong.</font><br/>";
+    if(empty($name)) {
+      echo "<font color='red'>Ruang nama kosong.</font><br/>";
+    }
+
+    if(empty($detail)) {
+      echo "<font color='red'>Ruang Keterangan Penyakit kosong.</font><br/>";
     }
   } else {
     //updating the table
-    $result = mysqli_query($mysqli, "INSERT INTO `link`(`id_penyakit`, `id_rawatan`) VALUES ('$penyakit','$rawatan')") //panggil tajuk dan detail rawatan
+    $result = mysqli_query($mysqli, "INSERT INTO `penyakit`(`name`, `detail`) VALUES ('$name','$detail')")
     or die("Could not execute the select query.");
 
+    $id = mysqli_insert_id($mysqli);
+
     //redirectig to the display page. In our case, it is view.php
-    header("Location: edit_penyakit.php?id=".$penyakit);
+    header("Location: list_penyakit.php");
   }
 }
-?>
-
-<?php
-//getting id from url
-$id = $_GET['id'];
-
-//selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM penyakit WHERE id=$id"); //paparkan tajuk penyakit
-
-while($res = mysqli_fetch_array($result))
-{
-  $name = $res['name'];
-}
-
-$result2 = mysqli_query($mysqli, "SELECT * FROM rawatan"); // drop down rawatan
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,32 +52,25 @@ $result2 = mysqli_query($mysqli, "SELECT * FROM rawatan"); // drop down rawatan
           <li class="breadcrumb-item">
             <a href="#">Halaman Utama</a>
           </li>
-          <li class="breadcrumb-item active">Tambah Rawatan</li>
+          <li class="breadcrumb-item active">Tambah Penyakit</li>
         </ol>
 
         <div class="card mb-3">
-          <div class="card-header"><i class="fa fa-table"></i>  Tambah Rawatan</div>
+          <div class="card-header"><i class="fa fa-table"></i>  Tambah Penyakit</div>
             <div class="card-body">
-              <form  name="add_penyakit" method="post" action="add_penyakit_rawatan.php">
+              <form  name="add_penyakit" method="post" action="add_penyakit.php">
                 <div class="form-group row">
                   <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama Penyakit" value="<?php echo $name;?>" disabled>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama Penyakit" value="">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="rawatan" class="col-sm-2 col-form-label"> Rawatan</label>
+                  <label for="detail" class="col-sm-2 col-form-label">Keterangan Penyakit</label>
                   <div class="col-sm-4">
-                    <select class="form-control" name="rawatan">
-                      <?php
-                      while($res2 = mysqli_fetch_array($result2))
-                      { ?>
-                        <option value="<?php echo $res2['id']; ?>"><?php echo $res2['name']; ?></option>
-                      <?php } ?>
-                    </select>
+                    <textarea class="form-control" rows="5" id="detail" name="detail"></textarea>
                   </div>
                 </div>
-                <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
                 <input type="submit" class="btn btn-primary" name="add" value="tambah">
                 <a href="list_penyakit.php" class="btn btn-danger">Batal</a>
               </form>

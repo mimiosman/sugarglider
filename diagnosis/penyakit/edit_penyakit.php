@@ -33,7 +33,7 @@ if(isset($_POST['update']))
     or die("Could not execute the select query.");
 
     //redirectig to the display page. In our case, it is view.php
-    header("Location: list_penyakit.php");
+    header("Location: view_penyakit.php?id=".$id);
   }
 }
 ?>

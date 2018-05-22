@@ -17,5 +17,5 @@ if(isset($_POST['bulk_delete_submit'])){ //segala checkbox yang dipilih akan del
     $result=mysqli_query($mysqli, "DELETE FROM link WHERE id=$id");
     }
 
-    header("Location: view_penyakit.php?id=".$idSick);
+    header("Location: edit_penyakit.php?id=".$idSick);
 }
