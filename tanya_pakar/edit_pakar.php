@@ -20,7 +20,12 @@ if(isset($_POST['update']))
   if(empty($jawapan)) {
 
     if(empty($jawapan)) {
-      echo "<font color='red'>Ruang jawapan kosong.</font><br/>";
+      //updating the table
+      $result1 = mysqli_query($mysqli, "UPDATE `pakar` SET `Jawapan`='$jawapan', `Status`='0' WHERE id=$id")
+      or die("Could not execute the select query.");
+
+      //redirectig to the display page. In our case, it is view.php
+      header("Location: list_pakar.php");
     }
   } else {
     //updating the table
